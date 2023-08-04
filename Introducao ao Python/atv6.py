@@ -1,0 +1,16 @@
+print("Restaurante:       Codigo:    Preço:")
+print("Cachorro Quente:   100        1,20")
+print("Bauru simples:     101        1,30")
+print("Bauru com ovo:     102        1,50")
+print("Hambúrger:         103        1,20")
+print("Cheeseburguer:     104        1,30")
+print("Refrigerante:      105        1,00")
+
+cod = int(input("\nDigite o Código: "))
+qtd = int(input("Digite a Quantidade: "))
+
+if cod == 100 or cod == 103: print(f"Valor: {qtd*1.20}")
+elif cod == 101 or cod == 104: print(f"Valor: {qtd*1.30}")
+elif cod == 102: print(f"Valor: {qtd*1.50}")
+elif cod == 105: print(f"Valor: {qtd*1}")
+else: print("Código Inválido!")
