@@ -4,19 +4,15 @@ class Carro:
         self.distPercorrida = dist
     
     def abastecerCarro(self, abastecimento):
-        if self.gasolina == 50:
-            print("Tanque Cheio!")
-        elif (self.gasolina + abastecimento) < 50:
-            self.gasolina += abastecimento
-        else:
-            self.gasolina = 50
+        if self.gasolina == 50:  print("Tanque Cheio!")
+        elif (self.gasolina + abastecimento) < 50: self.gasolina += abastecimento
+        else: self.gasolina = 50
     
     def moverCarro(self, dist):
         self.distPercorrida += dist
 
     def getGasolina(self):
-        return self.gasolina
-    
+        return self.gasolina  
     def getDistancia(self):
         return self.distPercorrida
 
