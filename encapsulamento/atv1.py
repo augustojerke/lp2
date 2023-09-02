@@ -20,3 +20,18 @@ class CarrodeCorrida:
     def getVeloMaxima(self): return self.vMaxima
     def getVeloAtual(self): return self.vAtual
     def getLigado(self): return self.ligado
+
+    def acelerar(self, acelerar):
+        if not self.getLigado(): print("Carro não está ligado")
+        elif self.getVeloAtual() >= self.getVeloMaxima(): print("Velocidade Máxima alcançada!")
+        elif (acelerar + self.getVeloAtual()) >= self.getVeloMaxima(): self.vAtual = self.vMaxima
+        else: self.vAtual += acelerar
+    
+    def frear(self, valor):
+        if self.getVeloAtual() <= 0: print("Carro ja esta parado")
+        elif not self.getLigado(): print("Carro parado")
+        else:
+            acelerar = 100 - acelerar
+            self.vAtual = self.vAtual * (acelerar/100)
+    
+    
