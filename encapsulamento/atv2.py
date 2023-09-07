@@ -9,7 +9,7 @@ class CarrodeCorrida:
 
     def setNumCarro(self, num): self.numeroCarro = num
     def setPiloto(self, piloto): self.piloto = piloto
-    def setEquipe(self, equipe): self.numeroCarro = equipe
+    def setEquipe(self, equipe): self.equipe = equipe
     def setVeloMaxima(self, v): self.vMaxima = v
     def setVeloAtual(self, v): self.vAtual = v
     def setLigado(self, ligado): self.ligado = ligado
@@ -31,9 +31,29 @@ class CarrodeCorrida:
         if self.getVeloAtual() <= 0: print("Carro ja esta parado")
         elif not self.getLigado(): print("Carro parado")
         else:
-            acelerar = 100 - acelerar
-            self.vAtual = self.vAtual * (acelerar/100)
+            valor = 100 - valor
+            self.vAtual = self.vAtual * (valor/100)
     
     def parar(self): self.setVeloAtual(0)
     def ligar(self): self.setLigado(True)
-    def desligar(self): self.setLigado(False)
+    def desligar(self):
+        if self.getVeloAtual == 0: self.setLigado(False)
+        else: print("Carro não ta parado")
+
+#Programa
+
+carro = CarrodeCorrida(7, "Augusto", "Ferrari", 80, 0, False)
+print(f"Nome: {carro.getPiloto()}, Equipe: {carro.getEquipe()}, Velo. Máxima: {carro.getVeloMaxima()}")
+carro.setVeloMaxima(100)
+carro.ligar()
+carro.acelerar(120)
+carro.acelerar(90)
+print(carro.getVeloAtual())
+carro.frear(10)
+print(carro.getVeloAtual()) 
+carro.desligar()
+carro.parar()
+carro.desligar()
+
+
+
