@@ -31,8 +31,8 @@ class CarrodeCorrida:
         if self.getVeloAtual() <= 0: print("Carro ja esta parado")
         elif not self.getLigado(): print("Carro parado")
         else:
-            acelerar = 100 - acelerar
-            self.vAtual = self.vAtual * (acelerar/100)
+            valor = 100 - valor
+            self.vAtual = self.vAtual * (valor/100)
     
     def parar(self): self.setVeloAtual(0)
     def ligar(self): self.setLigado(True)
